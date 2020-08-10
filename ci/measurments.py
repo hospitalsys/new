@@ -41,6 +41,5 @@ for team in teams:
 
     print("Failed deployments for team: %s" % team)
     url = api_endpoint + "/actions/runs?conclusion=failiure&owner=%s" % teams[team]["owner"]
-    resp = get(url, auth=(auth_user, auth_pass), headers=headers).json()
-    print(json.dumps(resp, indent=4))
+    resp = get(url, headers=headers).json()
     print("    %s" % resp["total_count"])
