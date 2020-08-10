@@ -1,10 +1,11 @@
 from requests import get
+import json
 
-auth_user = "username"
-auth_pass = "password"
+auth_user = "asiana@ac.sce.ac.il"
+auth_pass = "A301901567a"
 
-project = "proj"
-repository = "repo"
+project = "hospitalsys"
+repository = "projectFiles"
 
 api_endpoint = "https://api.github.com/repos/%s/%s" % (project, repository)
 
@@ -14,20 +15,16 @@ headers = {
 
 teams = {
     "team1": {
-        "users": ["u1", "u2", "u3"],
-        "owner": "u1"
+        "owner": "asiana-nabary"
     },
     "team2": {
-        "users": ["u3", "u4", "u5"],
-        "owner": "u3"
+        "owner": "AsiaNabary"
     },
     "team3": {
-        "users": ["u6", "u7", "u8"],
-        "owner": "u6"
+        "owner": "hurarabin2020"
     },
     "team4": {
-        "users": ["u9", "u10", "u11"],
-        "owner": "u9"
+        "owner": "schoolcom20hura"
     }
 }
 
@@ -45,4 +42,5 @@ for team in teams:
     print("Failed deployments for team: %s" % team)
     url = api_endpoint + "/actions/runs?conclusion=failiure&owner=%s" % teams[team]["owner"]
     resp = get(url, auth=(auth_user, auth_pass), headers=headers).json()
+    print(json.dumps(resp, indent=4))
     print("    %s" % resp["total_count"])
