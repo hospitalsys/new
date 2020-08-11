@@ -15,37 +15,37 @@ headers = {
 
 teams = {
     "team1": {
-        "owner": "asiana-nabary"
+        "assigne": "asiana-nabary"
     },
     "team2": {
-        "owner": "AsiaNabary",
-                "owner": "nabaryasia2"
+        "assinge": "AsiaNabary"
+#                "owner": "nabaryasia2"
 
     },
     "team3": {
-        "owner": "hurarabin2020" ,
-                "owner": "yonesheba200",
-                        "owner": "nooralquranhura"
+        "assignee": "hurarabin2020" 
+#             "owner": "yonesheba200",
+#                        "owner": "nooralquranhura"
 
 
     },
     "team4": {
-        "owner": "schoolcom20hura"
+        "assignee": "schoolcom20hura"
     }
 }
 
 for team in teams:
     print("Closed issues for team: %s" % team)
-    url = api_endpoint + "/issues?owner=%s&state=closed" % teams[team]["owner"]
+    url = api_endpoint + "/issues?assignee=%s&state=closed" % teams[team]["assignee"]
     resp = get(url, auth=(auth_user, auth_pass), headers=headers).json()
     print("    %s" % len(resp))
 
     print("Open bugs for team: %s" % team)
-    url = api_endpoint + "/issues?owner=%s&state=open&labels=bug" % teams[team]["owner"]
+    url = api_endpoint + "/issues?assignee=%s&state=open&labels=bug" % teams[team]["assignee"]
     resp = get(url, auth=(auth_user, auth_pass), headers=headers).json()
     print("    %s" % len(resp))
 
     print("Failed deployments for team: %s" % team)
-    url = api_endpoint + "/actions/runs?conclusion=failiure&owner=%s" % teams[team]["owner"]
+    url = api_endpoint + "/actions/runs?conclusion=failiure&assignee=%s" % teams[team]["assignee"]
     resp = get(url, headers=headers).json()
     print("    %s" % resp["total_count"])
