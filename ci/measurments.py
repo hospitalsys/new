@@ -18,7 +18,7 @@ teams = {
         "assignee": "asiana-nabary"
     },
     "team2": {
-        "assingee": "AsiaNabary"
+        "assignee": "AsiaNabary"
 #                "owner": "nabaryasia2"
 
     },
