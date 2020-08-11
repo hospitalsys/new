@@ -18,10 +18,16 @@ teams = {
         "owner": "asiana-nabary"
     },
     "team2": {
-        "owner": "AsiaNabary"
+        "owner": "AsiaNabary",
+                "owner": "nabaryasia2"
+
     },
     "team3": {
-        "owner": "hurarabin2020"
+        "owner": "hurarabin2020" ,
+                "owner": "yonesheba200",
+                        "owner": "nooralquranhura"
+
+
     },
     "team4": {
         "owner": "schoolcom20hura"
