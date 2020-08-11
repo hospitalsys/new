@@ -19,7 +19,7 @@ $uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
 header("location:http://$host$uri/$extra");
 exit();
 }
-else
+else // comment
 {
 $host  = $_SERVER['HTTP_HOST'];
 $_SESSION['dlogin']=$_POST['username'];
