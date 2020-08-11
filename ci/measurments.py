@@ -1,8 +1,8 @@
 from requests import get
 import json
 
-auth_user = "nasiana@ac.sce.ac.il"
-auth_pass = "A301901567a"
+auth_user = "nabaryasia2@gmail.com"
+auth_pass = "301901567asia"
 
 project = "hospitalsys"
 repository = "projectFiles"
