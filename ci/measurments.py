@@ -15,7 +15,7 @@ headers = {
 
 teams = {
     "team1": {
-        "assignee": "asiana-nabary"
+        "assignee": ["asiana-nabary"]
     },
     "team2": {
         "assignee": ["AsiaNabary" , "nabaryasia2"]
@@ -27,7 +27,7 @@ teams = {
 
     },
     "team4": {
-        "assignee": "schoolcom20hura"
+        "assignee": ["schoolcom20hura"]
     }
 }
 
