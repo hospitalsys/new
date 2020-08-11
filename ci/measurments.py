@@ -15,10 +15,10 @@ headers = {
 
 teams = {
     "team1": {
-        "assigne": "asiana-nabary"
+        "assignee": "asiana-nabary"
     },
     "team2": {
-        "assinge": "AsiaNabary"
+        "assingee": "AsiaNabary"
 #                "owner": "nabaryasia2"
 
     },
